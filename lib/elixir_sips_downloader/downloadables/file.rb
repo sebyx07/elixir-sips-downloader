@@ -18,16 +18,15 @@ class ElixirSipsDownloader::Downloadables::File <
   # Download the File.
   #
   # @param (see: ElixirSipsDownloader::Downloadables::Catalog#download)
-  def download basepath, agent
+  def download(basepath, agent)
     FileUtils.mkdir_p basepath
 
     file_path = File.join(basepath, name)
-    ElixirSipsDownloader.logger.info "Starting download of file `#{ name }' " \
-                                    "in `#{ file_path }'..."
-    unless File.exists? file_path 
-    agent.progressbar { 
-      agent.download link, file_path
-    }
+    ElixirSipsDownloader.logger.info "Starting download of file `#{ name }' in `#{ file_path }'..."
+    unless File.exists? file_path
+      agent.progressbar {
+        agent.download link, file_path
+      }
     end
   end
 

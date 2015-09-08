@@ -1,4 +1,4 @@
-Elixir Sips Downloader
+**JRUBY multithreaded** Elixir Sips Downloader
 ======================
 
 Elixir Sips Downloader downloads all episodes and attachments, 
@@ -14,10 +14,15 @@ Installation
 1. Clone this repository:
 
   ```bash
-  $ git clone https://github.com/benjamintanweihao/elixir-sips-downloader.git
+  $ git clone git@github.com:sebyx07/elixir-sips-downloader.git
+  ```
+2. Install JRUBY:
+
+  ```bash
+  $ rvm install jruby && rvm use jruby
   ```
 
-2. Install dependencies:
+3. Install dependencies:
 
   ```bash
   $ bundle install
@@ -33,11 +38,7 @@ $ bin/elixir-sips-downloader <email> <password> <download-path>
 Warning
 -------
 
-Except for a few episodes, Elixir Sips is a paid screencast series. Therefore, please
-don't redistribute the downloaded material. Elixir Sips Downloader is
-only an utility tool and doesn't substitute the subscription.
-
-You should do no evil!
+upload them to torrents
 
 Thanks
 ------
